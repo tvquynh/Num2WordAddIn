@@ -8,7 +8,7 @@ URL: https://github.com/tvquynh/Num2WordAddIn
 
 #Installation Requirements:
 =========================
-Use the Setup.exe file for installation.
+Use the <b>Setup.exe</b> file for installation.
 - Before installing, please close all instances of Microsoft Excel.
 
 #What this installation includes:
