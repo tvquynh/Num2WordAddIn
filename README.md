@@ -1,4 +1,3 @@
-# Num2WordAddIn
 #Num2Word Add-In for Microsoft Excel
 ===================================
 
