@@ -1,4 +1,4 @@
-﻿using Humanizer;
+using Humanizer;
 using System.Globalization;
 using ExcelDna.Integration;
 using System.Linq;
@@ -37,8 +37,12 @@ public static class ExcelFunctions
         string decimalPart = number.ToString("F99").Split('.')[1].TrimEnd('0');
         string decimalWords = string.Join(" ", decimalPart.Select(digit => int.Parse(digit.ToString()).ToWords(new CultureInfo(cultureCode))));
 
+        // Thêm đơn vị tiền tệ vào kết quả
+        string currencyUnit = cultureCode == "vi" ? " đồng" : " dollars";
+
         return decimalWords.Length > 0
-            ? integerWords + decimalSeparator + decimalWords
-            : integerWords;
+            ? integerWords + decimalSeparator + decimalWords + currencyUnit
+            : integerWords + currencyUnit;
     }
+
 }
